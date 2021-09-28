@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;0,400;1,700&display=swap');
+
+:root {
+    --neonGreen: #54E6AF;
+    --darkGray: #2C344B;
+    --gentleBlack: #121725;
+    --lightGray: #5A668A;
+    --lighterGray: #C2CBE5;
+}
+
+html, body {
+    /* TODO: sta mu je ovaj overflow auto za collapsing margins */
+    overflow: auto;
+}
+
+body {
+    font-family: "Chivo", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: lighter;
+    color: var(--lighterGray);
+    background-color: var(--gentleBlack);
+    /* background-size: contain; */
+    background-repeat: no-repeat;
+    background-position: center right;
+    margin: 0;
+    /* min-height: 100vh; */
+    /* overflow: auto; */
+    
+}
+
+.title {
+    font-size: 52px;
+    line-height: 62px;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin: 0;
+}
+
+.title-neon {
+    color: var(--neonGreen);
+}
+
+/* TODO: dodaj class umesto ovog selectora */
+
+.button {
+    font-family: "Chivo", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--gentleBlack);
+    background-color: var(--neonGreen);
+    padding: 15px 27px;
+    border: none;
+    border-radius: 3vw;
+    margin: 5px;
+
+}
+
+.button:hover {
+    background-color: #B3FFE2;
+    cursor: pointer;
+}
+
+.access-input {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--darkGray);
+    max-width: 427px;
+    border-radius: 3vw;
+}
+
+.input-email {
+    padding: 14px 25px 14px 32px;
+    border-radius: 3vw;
+    background-color: var(--darkGray);
+    color: white;
+    border: none;
+    font-weight: bold;
+
+    outline: none;
+    flex: 1;
+}
+
+/* TODO */
+/* .input-email {
+} */
+
+.input-error {
+    color: #FB3E3E;
+    padding: 8px 0 0 32px;
+    font-size: 12px;
+    font-weight: bold;
+    visibility: hidden;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: end;
+    /* justify-content: center; */
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* input[type="text"]::placeholder {
+    color: ;
+} */
+
+.main-container {
+    flex:1;
+    max-width: 1275px;
+    
+    background-image: url(desktop/image-host.jpg);
+    /* margin: 260px 0 0 165px; */
+}
+
+.content {
+    
+    background-color: var(--gentleBlack);
+    max-width: 723px;
+    padding: 88px 58px 0 0;
+    /* margin-right: ; */
+}
+
+.main-text {
+    max-width: 445px;
+}
+
+.podcast-icons {
+    margin-top: 42px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+}
+
