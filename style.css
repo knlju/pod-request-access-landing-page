@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;0,400;1,700&display=swap');
+
+:root {
+    --neonGreen: #54E6AF;
+    --darkGray: #2C344B;
+    --gentleBlack: 18, 23, 37;
+    --lightGray: #5A668A;
+    --lighterGray: #C2CBE5;
+}
+
+body {
+    font-family: "Chivo", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: lighter;
+    color: var(--lighterGray);
+    background-color: rgb(var(--gentleBlack));
+    margin: 0;
+
+}
+
+.title {
+    font-size: 52px;
+    line-height: 62px;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin: 0;
+    color: white;
+}
+
+.title-neon {
+    color: var(--neonGreen);
+}
+
+.button {
+    font-family: "Chivo", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    color: rgb(var(--gentleBlack));
+    background-color: var(--neonGreen);
+    padding: 15px 27px;
+    border: none;
+    border-radius: 3vw;
+    margin: 5px;
+}
+
+.button:hover {
+    background-color: #B3FFE2;
+    cursor: pointer;
+}
+
+.access-input {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--darkGray);
+    max-width: 427px;
+    border-radius: 3vw;
+}
+
+.input-email {
+    padding: 14px 25px 14px 32px;
+    border-radius: 3vw;
+    background-color: var(--darkGray);
+    color: white;
+    border: none;
+    font-family: "Chivo", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    outline: none;
+    flex: 1;
+}
+
+.input-error {
+    color: #FB3E3E;
+    padding: 8px 0 0 32px;
+    font-size: 12px;
+    font-weight: bold;
+    visibility: hidden;
+}
+
+.show-error {
+    visibility: visible;
+}
+
+.content {
+    background-color: rgb(var(--gentleBlack));
+    max-width: 723px;
+    padding: 88px 58px 0 0;
+    margin: 131px 0 0 11%;
+}
+
+.main-text {
+    max-width: 445px;
+}
+
+.podcast-icons {
+    margin-top: 42px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+}
+
+.podcast-icon img {
+    width: 90%;
+    height: auto;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.main-content {
+    flex-grow: 1;
+    background-image: url(desktop/image-host.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    position: relative;
+}
+
+.logo,
+.dots {
+    position: absolute;
+}
+
+.logo {
+    left: 11%;
+    top: -28px;
+}
+
+.dots {
+    right: 0;
+    bottom: -52px;
+}
+
+@media screen and (max-width:1025px) {
+
+    .title {
+        font-size: 48px;
+        line-height: 56px;
+    }
+
+    .wrapper {
+        align-items: flex-start;
+    }
+
+    .main-content {
+        background-image: url(tablet/image-host.jpg);
+        background-size: contain;
+    }
+
+    .content {
+        max-width: 635px;
+        margin-top: 258px;
+        margin-left: 6%;
+        padding-right: 0px;
+    }
+
+    .logo {
+        top: 50px;
+        left: 6%;
+    }
+
+    .dots {
+        bottom: -35%;
+        left: 6%;
+    }
+
+    .access-input {
+        border-radius: 4vw;
+    }
+
+    .input-email {
+        border-radius: 4vw;
+    }
+
+    .button {
+        border-radius: 4vw;
+    }
+}
+
+@media screen and (max-width: 600px), screen and (max-width: 769px) and (orientation: landscape) {
+
+    .title {
+        font-size: 26px;
+        line-height: 38px;
+    }
+
+    .main-text {
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .wrapper {
+        background: url(mobile/image-host.jpg);
+        background-size: cover;
+        background-position: center center;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .content {
+        margin: 0 0 90px 0;
+        background: none;
+        max-width: 100%;
+        padding: 0 24px;
+    }
+
+    .main-content {
+        background: none;
+        background-color: rgba(18, 23, 37, 0.9);
+        min-height: 100vh;
+    }
+
+    .main-text {
+        max-width: none;
+    }
+
+    .dots {
+        display: none;
+    }
+
+    .access-input {
+        background: none;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        max-width: none;
+    }
+
+    .input-email {
+        border-radius: 6vw;
+    }
+
+    .input-error {
+        padding: 0;
+    }
+
+    .button {
+        border-radius: 6vw;
+        margin: 0;
+    }
+
+    .logo {
+        top: 0;
+        left: 0;
+        position: relative;
+        padding: 62px 0 55px;
+    }
+
+    .mobile-reverse {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 33px;
+    }
+
+    .podcast-icons {
+        margin: 0;
+        justify-content: center;
+    }
+
+    .input-error {
+        padding: 10px 0;
+    }
+}
